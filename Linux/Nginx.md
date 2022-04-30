@@ -1,5 +1,5 @@
 # With Reverse Proxy
-###NOTE THAT DNS IS REQUIRED TO USE REVERSE PROXY
+### NOTE THAT DNS IS REQUIRED TO USE REVERSE PROXY
 [BIND9](https://github.com/BarnaNorbert19/Cheat-Sheets/blob/main/Linux/BIND9.md "BIND9") or SAMBA
 
 ---
