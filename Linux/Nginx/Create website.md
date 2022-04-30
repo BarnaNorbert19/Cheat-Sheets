@@ -1,4 +1,4 @@
-#### 1. Create the directory for the website (this is where the source files will be stored)
+# 1. Create the directory for the website (this is where the source files will be stored)
 The -p flag tells mkdir to create any necessary parent directories along the way.
 ```
 sudo mkdir -p /var/www/$PAGE.NAME$/html
@@ -7,7 +7,7 @@ Change owner if necessary
 ```
 sudo chown -R $USER$ /var/www/$PAGE.NAME$/html
 ```
-#### 2. Creating Sample Page
+# 2. Creating Sample Page
 ```
 nano /var/www/$PAGE.NAME$/html/index.html
 ```
@@ -21,7 +21,7 @@ nano /var/www/$PAGE.NAME$/html/index.html
     </body>
 </html>
 ```
-#### 3. Creating Server Block Files
+# 3. Creating Server Block Files
 Create our server block config file by copying over the default file
 ```
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/$PAGE.NAME$
@@ -30,7 +30,7 @@ sudo nano /etc/nginx/sites-available/$PAGE.NAME$
 Remove <b style='color: #eb0000'>default_server</b> if we don't intent to use it as a default site (there can be only one default_server website)
 ```
 server {
-        listen 8080 default_server;
+        listen 80 default_server;
         listen [::]:8080 default_server;
 
         . . .
