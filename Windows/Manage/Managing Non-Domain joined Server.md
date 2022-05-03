@@ -10,9 +10,19 @@ Get-Item WSMan:\localhost\Client\TrustedHosts
 ```
 # Add username password
 To login with server's local username password
-```cmd
+```powershell
 cmdkey /add:computer_name /user:Administrator /pass:Password
 ```
 # Add to Server Manager
 To add a non-domain joined server or a Workgroup server to Server Manager, you must use DNS or Import option in the Add Servers Wizard.
 [![Add DNS to server manager](https://www.jorgebernhardt.com/wp-content/uploads/2018/08/add-server.SM_.png "Add DNS to server manager")](https://www.jorgebernhardt.com/wp-content/uploads/2018/08/add-server.SM_.png "Add DNS to server manager")
+### Remove cmdkey
+```cmd
+cmdkey /delete:computer_name
+```
+### Remove TrustedHost
+
+### Remove all TrustedHosts
+```powershell
+Clear-Item WSMan:\localhost\Client\TrustedHosts
+```
