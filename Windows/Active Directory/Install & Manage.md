@@ -9,5 +9,5 @@ Install-ADDSFOREST -DomainName DOMAIN.NAME -DomainNetbiosName DOMAIN -Force -Dom
 ```
 # Create group
 ```powershell
-New-ADgroup –Name "webfejlesztok" -GroupScope "Global"
+New-ADgroup –Name "group_name" -GroupScope "Global"
 ```
