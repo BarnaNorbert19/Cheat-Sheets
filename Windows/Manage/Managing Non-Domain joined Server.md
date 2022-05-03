@@ -10,7 +10,7 @@ Get-Item WSMan:\localhost\Client\TrustedHosts
 ```
 # Add username password
 To login with server's local username password
-```powershell
+```cmd
 cmdkey /add:computer_name /user:Administrator /pass:Password
 ```
 # Add to Server Manager
