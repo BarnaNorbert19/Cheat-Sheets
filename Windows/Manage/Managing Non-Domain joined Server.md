@@ -2,7 +2,7 @@
 Domain membership automatically establishes a trust relationship between the computers in the domain. To manage computers that aren’t in the same domain or are in a workgroup, you must establish that trust yourself by adding the computers you want to manage to the TrustedHosts list on the computer running Server Manager.
 Add server to TrustedHosts
 ```powershell
-Set-Item wsman:\localhost\Client\TrustedHosts "computer_ip_or_domain, entry_name" -Concatenate -Force
+Set-Item wsman:\localhost\Client\TrustedHosts "computer" -Concatenate -Force
 ```
 List of machines that are in the TrustedHosts
 ```powershell
