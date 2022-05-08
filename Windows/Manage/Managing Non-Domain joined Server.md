@@ -21,7 +21,7 @@ To add a non-domain joined server or a Workgroup server to Server Manager, you m
 cmdkey /delete:computer_name
 ```
 ### Remove TrustedHost
-
+[Script](https://github.com/BarnaNorbert19/Cheat-Sheets/blob/main/Windows/Scripts/TrustedHost.psm1 "Script")
 ### Remove all TrustedHosts
 ```powershell
 Clear-Item WSMan:\localhost\Client\TrustedHosts
