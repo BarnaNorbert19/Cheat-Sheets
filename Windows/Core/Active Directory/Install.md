@@ -7,7 +7,3 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```powershell
 Install-ADDSFOREST -DomainName DOMAIN.NAME -DomainNetbiosName DOMAIN -Force -DomainMode WinThreshold -ForestMode WinThreshold
 ```
-# Create group
-```powershell
-New-ADgroup –Name "group_name" -GroupScope "Global"
-```
