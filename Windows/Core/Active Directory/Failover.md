@@ -18,7 +18,6 @@ Set-DnsServerForwarder -IPAddress 8.8.8.8
 Install-WindowsFeature DHCP -IncludeManagementTools
 ```
 # Set DHCP scope
-Change domain.name at ```-dnsdomain```
 ```powershell
 Set-DHCPServerV4OptionValue -dnsdomain domain.name -dnsserver 192.168.8.1, 192.168.8.2 -router 192.168.8.254
 ```
