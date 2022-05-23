@@ -15,6 +15,6 @@ Set-DHCPServerV4OptionValue -dnsdomain domain.name -dnsserver 192.168.8.1, 192.1
 Add-DHCPServerInDC -dnsname pcname.domain.name
 ```
 # Restart DHCP
-```cmd
+```powershell
 restart-service dhcpserver
 ```
