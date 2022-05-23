@@ -9,7 +9,7 @@ Import-module servermanager
 Set-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\WebManagement\Server -Name EnableRemoteManagement -Value 1
 ```
 # Restart web management service
-```powershell
+```cmd
 Net Stop WMSVC
 Net Start WMSVC
 ```
@@ -18,6 +18,6 @@ Net Start WMSVC
 Set-Service WMSVC -StartupType Automatic
 ```
 # Restart IIS
-```powershell
+```cmd
 IISRESET /restart
 ```
