@@ -1,6 +1,6 @@
 # Install NTP
 ```
-apt-get install ntp ntpdate -y
+sudo apt-get install ntp ntpdate -y
 ```
 #Configure
 Stop ntp
