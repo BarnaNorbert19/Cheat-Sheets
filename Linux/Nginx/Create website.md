@@ -27,7 +27,7 @@ Create our server block config file by copying over the default file
 sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/$PAGE.NAME$
 sudo nano /etc/nginx/sites-available/$PAGE.NAME$
 ```
-Remove <b style='color: #eb0000'>default_server</b> if we don't intent to use it as a default site (there can be only one default_server website)
+Remove <b style='color: #eb0000'>default_server</b> if we don't intend to use it as a default site (there can be only one default_server website)
 ```
 server {
         listen 80 default_server;
