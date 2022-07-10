@@ -1,5 +1,5 @@
-# Tanusítvány generálása
-Részletes leírás -> [Itt](https://github.com/BarnaNorbert19/Notes/blob/main/OpenSSL/Tanusítvány.md "Itt")
+# Tanusítvány
+Self signed (Részletes leírás) -> [Itt](https://github.com/BarnaNorbert19/Notes/blob/main/OpenSSL/Tanusítvány.md "Itt")
 # Confing fájl
 `VirtualHost *:80 `-ról átírjuk`VirtualHost *:443 `-ra
 #### A következőt pedig hozzáadjuk a confighoz
