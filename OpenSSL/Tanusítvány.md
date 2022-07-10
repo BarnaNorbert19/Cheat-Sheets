@@ -1,5 +1,5 @@
-# Certificates 
-It doesen't metter where you use these commands as long as you have openssl
+# SSL/TLS
+A SSL/TLS protokolok lehetővé teszik, hogy titkosítsuk a szerver és a kliens közötti kommunikációt. Az SSL-t 1999-ben leváltotta a TLS, de a mai napig SSL vagy SSL/TLS tanusítványként referálunk rá. Jelenleg az 1.3 as TLS verzió a legfrissebb.
 ## 1. Private Key
 After the```-out``` parameter, we need to specify the location where we want to save the private key
 ```
