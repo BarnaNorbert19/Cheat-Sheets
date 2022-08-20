@@ -20,7 +20,7 @@ Tehát valahogy így fog kinézni
         SSLCertificateKeyFile /etc/apache2/certificate/apache.key
 </VirtualHost>
 ```
-#### SSL modúl elindítása
+#### SSL modul elindítása
 ```
 a2enmod ssl
 ```
