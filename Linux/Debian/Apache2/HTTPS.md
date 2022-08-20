@@ -20,4 +20,11 @@ Tehát valahogy így fog kinézni
         SSLCertificateKeyFile /etc/apache2/certificate/apache.key
 </VirtualHost>
 ```
+#### SSL modúl elindítása
+```
+a2enmod ssl
+```
 Apache restart
+```
+systemctl reload apache2
+```
