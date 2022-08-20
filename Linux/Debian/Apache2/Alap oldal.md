@@ -19,7 +19,7 @@ nano /etc/apache2/sites-available/weboldal.com.conf
 #### Itt több dolgot is érdemes módosítani
 ##### `VirtualHost *:80` - `*` jelöli kit szolgál ki (jelen esetben *, tehát midenkit), és milyen porton.
 ##### `ServerAdmin` - nem szükséges az oldal működéséhez, ha megadjuk PHP-ba enviromental változoként elérhető lesz `$_SERVER['SERVER_ADMIN'] `.
-##### `ServerName` - fontos, ez lesz az azonosítója a weboldalnak. Ha egyetlen szervert hosztolunk elengedhető de akkor sem ajánlott, mert ha nincs megadva ServerName, az Apache megpróbálja a server IP-je alapján kitalálni azt.
+##### `ServerName` - fontos, ez lesz az azonosítója a weboldalnak. Ha egyetlen szervert hosztolunk elengedhető, de akkor sem ajánlott, mert ha nincs megadva ServerName, az Apache megpróbálja a server IP-je alapján kitalálni azt.
 ##### `ServerAlias` - Alternatív név, nem muszáj. www. kezdődésű domain név variációt majdnem mindíg ide írjuk.
 ##### `DocumentRoot` - Elengedhetetlen, a soruce fájlok mappájára mutat.
 # Weboldal engedélyezése, alap weboldal tiltása
