@@ -6,7 +6,7 @@ sudo apt update && sudo apt upgrade
 ##### Hostname megváltoztatása/ellenörzése
 Fontos, hogy a hostname rendben legyen, mert ha utólag megváltoztatjuk problémákhoz vezethet. [Leírás](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Debian/Hostname/Megváltoztatása.md "Leírás")
 ##### Statikus IP
-[Leírás](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Debian/IP/IP%20megváltoztatása.md "Leírás")
+[Leírás](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Ubuntu/IP/IP%20megváltoztatása.md "Leírás")
 ##### Hosts fájl
 ```
 sedo nano /etc/hostname
