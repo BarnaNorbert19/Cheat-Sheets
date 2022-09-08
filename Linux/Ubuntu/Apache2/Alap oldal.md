@@ -1,20 +1,20 @@
 # Weboldal mappájának létrehozása
 Ebben a mappában lesz tárolva az összes source file a weboldalhoz (.html, .css, képek, stb.). `-p` létrehoz minden szükséges parent mappát.
 ```
-sudo mkdir -p /var/www/weboldal.com
+mkdir -p /var/www/weboldal.com
 ```
 # Alap oldal
 Hozzunk létre egy `index.html` fájlt a weboldal mappáján belűl és írjunk bele valamit.
 ```
-sudo nano /var/www/weboldal.com/index.html
+nano /var/www/weboldal.com/index.html
 ```
 # Oldal config fájlja
-Miden oldalnak kell legyen egy `.conf` kiterjesztésű fájlja a `/etc/apache2/sites-available` directoryban (ez a gyűjtőhelye ezen fájloknak). Nevéből adódóan az oldal beállításait tudjuk módosítani vele. Az egyszerűség kedvéért, másoljuk át az alap weboldal config fájlját és szerkesszük azt. [HTTPS oldal leírása]([https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Debian/Apache2/HTTPS.md](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Ubuntu/Apache2/HTTPS.md) "HTTPS oldal leírása")
+Miden oldalnak kell legyen egy `.conf` kiterjesztésű fájlja a `/etc/apache2/sites-available` directoryban (ez a gyűjtőhelye ezen fájloknak). Nevéből adódóan az oldal beállításait tudjuk módosítani vele. Az egyszerűség kedvéért, másoljuk át az alap weboldal config fájlját és szerkesszük azt. [HTTPS oldal leírása](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Ubuntu/Apache2/HTTPS.md "HTTPS oldal leírása")
 ```
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/weboldal.com.conf
+cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/weboldal.com.conf
 ```
 ```
-sudo nano /etc/apache2/sites-available/weboldal.com.conf
+nano /etc/apache2/sites-available/weboldal.com.conf
 ```
 #### Itt több dolgot is érdemes módosítani
 ##### `VirtualHost *:80` - `*` jelöli kit szolgál ki (jelen esetben *, tehát midenkit), és milyen porton.
@@ -24,12 +24,16 @@ sudo nano /etc/apache2/sites-available/weboldal.com.conf
 ##### `DocumentRoot` - Elengedhetetlen, a soruce fájlok mappájára mutat.
 # Weboldal engedélyezése, alap weboldal tiltása
 ```
-sudo a2ensite weboldal.com.conf
+a2ensite weboldal.com.conf
 ```
 ```
-sudo a2dissite 000-default.conf
+a2dissite 000-default.conf
 ```
 Indítsuk újra az apachet
 ```
-sudo systemctl restart apache2
+systemctl restart apache2
+```
+Ha nem akarjuk a már működő weboldalakat is újraindítani
+```
+/etc/init.d/httpd reload
 ```
