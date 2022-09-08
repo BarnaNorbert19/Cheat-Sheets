@@ -9,7 +9,7 @@ Hozzunk létre egy `index.html` fájlt a weboldal mappáján belűl és írjunk 
 sudo nano /var/www/weboldal.com/index.html
 ```
 # Oldal config fájlja
-Miden oldalnak kell legyen egy `.conf` kiterjesztésű fájlja a `/etc/apache2/sites-available` directoryban (ez a gyűjtőhelye ezen fájloknak). Nevéből adódóan az oldal beállításait tudjuk módosítani vele. Az egyszerűség kedvéért, másoljuk át az alap weboldal config fájlját és szerkesszük azt. [HTTPS oldal leírása](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Debian/Apache2/HTTPS.md "HTTPS oldal leírása")
+Miden oldalnak kell legyen egy `.conf` kiterjesztésű fájlja a `/etc/apache2/sites-available` directoryban (ez a gyűjtőhelye ezen fájloknak). Nevéből adódóan az oldal beállításait tudjuk módosítani vele. Az egyszerűség kedvéért, másoljuk át az alap weboldal config fájlját és szerkesszük azt. [HTTPS oldal leírása]([https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Debian/Apache2/HTTPS.md](https://github.com/BarnaNorbert19/Notes/blob/main/Linux/Ubuntu/Apache2/HTTPS.md) "HTTPS oldal leírása")
 ```
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/weboldal.com.conf
 ```
