@@ -14,11 +14,6 @@ function AutoInstallAD {
         [string]
         $DomainName,
 
-        
-        [Parameter(Mandatory = $true)]
-        [string]
-        $DomainNetbiosName,
-
         [Parameter(Mandatory = $false)]
         [ValidateSet('Win2008', 'Win2008R2', 'Win2012', 'Win2012R2', 'WinThreshold', 'Default')]
         [string]
@@ -40,7 +35,8 @@ function AutoInstallAD {
             Write-Output("Installing Active Directory Services...")
             Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
             Write-Output("Configuring Active Directory...")
-            Install-ADDSFOREST -DomainName $DomainName -DomainNetbiosName $DomainNetbiosName -Force -DomainMode $DomainMode -ForestMode $ForestMode
+            $domainNetbiosName = $DomainName.Split('.')[0].ToUpper()
+            Install-ADDSFOREST -DomainName $DomainName.ToUpper() -DomainNetbiosName $domainNetbiosName -Force -DomainMode $DomainMode -ForestMode $ForestMode
         }
         catch {
             Write-Host "An error occurred (at " + $_.ScriptStackTrace + "):"
