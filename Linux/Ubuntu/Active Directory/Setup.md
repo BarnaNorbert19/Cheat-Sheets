@@ -76,7 +76,7 @@ sudo unlink /etc/resolv.conf
 ```
 ##### Indítsuk el a Samba szolgáltatásokat
 ```
-systemctl unmask samba-ad-dc.service
-systemctl start samba-ad-dc.service
-systemctl enable samba-ad-dc.service
+sudo systemctl unmask samba-ad-dc.service
+sudo systemctl start samba-ad-dc.service
+sudo systemctl enable samba-ad-dc.service
 ```
