@@ -70,7 +70,7 @@ search domain.nev
 nameserver 192.168.1.1
 nameserver 8.8.8.8
 ```
-#####Ubuntu esetében a resolv.conf fájlt a man:systemd kezeli, ez annyit jelent, hogy linkelve van, tehát ha megváltoztatunk benne valamit az nem fog érvényesülni. Ezért unlinkeljük.
+##### Ubuntu esetében a resolv.conf fájlt a man:systemd kezeli, ez annyit jelent, hogy linkelve van, tehát ha megváltoztatunk benne valamit az nem fog érvényesülni. Ezért unlinkeljük.
 ```
 sudo unlink /etc/resolv.conf
 ```
